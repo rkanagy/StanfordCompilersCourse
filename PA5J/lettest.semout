@@ -1,0 +1,293 @@
+#1
+_program
+  #1
+  _class
+    Main
+    Object
+    "lettest.cl"
+    (
+    #2
+    _method
+      main
+      Object
+      #3
+      _let
+        x
+        Int
+        #0
+        _no_expr
+        : _no_type
+        #3
+        _let
+          y
+          Bool
+          #0
+          _no_expr
+          : _no_type
+          #3
+          _let
+            z
+            String
+            #0
+            _no_expr
+            : _no_type
+            #3
+            _let
+              a
+              Int
+              #3
+              _int
+                1
+              : Int
+              #3
+              _let
+                b
+                Bool
+                #3
+                _bool
+                  1
+                : Bool
+                #3
+                _let
+                  c
+                  String
+                  #3
+                  _string
+                    "string"
+                  : String
+                  #3
+                  _let
+                    io
+                    IO
+                    #0
+                    _no_expr
+                    : _no_type
+                    #4
+                    _block
+                      #5
+                      _assign
+                        io
+                        #5
+                        _new
+                          IO
+                        : IO
+                      : IO
+                      #6
+                      _dispatch
+                        #6
+                        _new
+                          IO
+                        : IO
+                        out_int
+                        (
+                        #6
+                        _object
+                          x
+                        : Int
+                        )
+                      : IO
+                      #7
+                      _dispatch
+                        #7
+                        _object
+                          io
+                        : IO
+                        out_string
+                        (
+                        #7
+                        _string
+                          "\n"
+                        : String
+                        )
+                      : IO
+                      #8
+                      _cond
+                        #8
+                        _object
+                          y
+                        : Bool
+                        #8
+                        _dispatch
+                          #8
+                          _object
+                            io
+                          : IO
+                          out_string
+                          (
+                          #8
+                          _string
+                            "true"
+                          : String
+                          )
+                        : IO
+                        #8
+                        _dispatch
+                          #8
+                          _object
+                            io
+                          : IO
+                          out_string
+                          (
+                          #8
+                          _string
+                            "false"
+                          : String
+                          )
+                        : IO
+                      : IO
+                      #9
+                      _dispatch
+                        #9
+                        _object
+                          io
+                        : IO
+                        out_string
+                        (
+                        #9
+                        _string
+                          "\n"
+                        : String
+                        )
+                      : IO
+                      #10
+                      _dispatch
+                        #10
+                        _object
+                          io
+                        : IO
+                        out_string
+                        (
+                        #10
+                        _object
+                          z
+                        : String
+                        )
+                      : IO
+                      #11
+                      _dispatch
+                        #11
+                        _object
+                          io
+                        : IO
+                        out_string
+                        (
+                        #11
+                        _string
+                          "\n"
+                        : String
+                        )
+                      : IO
+                      #12
+                      _dispatch
+                        #12
+                        _object
+                          io
+                        : IO
+                        out_int
+                        (
+                        #12
+                        _object
+                          a
+                        : Int
+                        )
+                      : IO
+                      #13
+                      _dispatch
+                        #13
+                        _object
+                          io
+                        : IO
+                        out_string
+                        (
+                        #13
+                        _string
+                          "\n"
+                        : String
+                        )
+                      : IO
+                      #14
+                      _cond
+                        #14
+                        _object
+                          b
+                        : Bool
+                        #14
+                        _dispatch
+                          #14
+                          _object
+                            io
+                          : IO
+                          out_string
+                          (
+                          #14
+                          _string
+                            "true"
+                          : String
+                          )
+                        : IO
+                        #14
+                        _dispatch
+                          #14
+                          _object
+                            io
+                          : IO
+                          out_string
+                          (
+                          #14
+                          _string
+                            "false"
+                          : String
+                          )
+                        : IO
+                      : IO
+                      #15
+                      _dispatch
+                        #15
+                        _object
+                          io
+                        : IO
+                        out_string
+                        (
+                        #15
+                        _string
+                          "\n"
+                        : String
+                        )
+                      : IO
+                      #16
+                      _dispatch
+                        #16
+                        _object
+                          io
+                        : IO
+                        out_string
+                        (
+                        #16
+                        _object
+                          c
+                        : String
+                        )
+                      : IO
+                      #17
+                      _dispatch
+                        #17
+                        _object
+                          io
+                        : IO
+                        out_string
+                        (
+                        #17
+                        _string
+                          "\n"
+                        : String
+                        )
+                      : IO
+                    : IO
+                  : IO
+                : IO
+              : IO
+            : IO
+          : IO
+        : IO
+      : IO
+    )

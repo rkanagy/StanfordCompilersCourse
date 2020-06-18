@@ -1,0 +1,588 @@
+#1
+_program
+  #1
+  _class
+    Main
+    IO
+    "fib.cl"
+    (
+    #2
+    _attr
+      x
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #3
+    _method
+      main
+      Object
+      #4
+      _let
+        z
+        Int
+        #0
+        _no_expr
+        : _no_type
+        #5
+        _block
+          #8
+          _dispatch
+            #8
+            _object
+              self
+            : SELF_TYPE
+            looptest
+            (
+            #8
+            _int
+              7
+            : Int
+            )
+          : Object
+        : Object
+      : Object
+    #11
+    _method
+      fib
+      #11
+      _formal
+        x
+        Int
+      Int
+      #12
+      _cond
+        #12
+        _eq
+          #12
+          _object
+            x
+          : Int
+          #12
+          _int
+            1
+          : Int
+        : Bool
+        #12
+        _int
+          0
+        : Int
+        #13
+        _cond
+          #13
+          _eq
+            #13
+            _object
+              x
+            : Int
+            #13
+            _int
+              2
+            : Int
+          : Bool
+          #13
+          _int
+            1
+          : Int
+          #14
+          _plus
+            #14
+            _dispatch
+              #14
+              _object
+                self
+              : SELF_TYPE
+              fib
+              (
+              #14
+              _sub
+                #14
+                _object
+                  x
+                : Int
+                #14
+                _int
+                  1
+                : Int
+              : Int
+              )
+            : Int
+            #14
+            _dispatch
+              #14
+              _object
+                self
+              : SELF_TYPE
+              fib
+              (
+              #14
+              _sub
+                #14
+                _object
+                  x
+                : Int
+                #14
+                _int
+                  2
+                : Int
+              : Int
+              )
+            : Int
+          : Int
+        : Int
+      : Int
+    #18
+    _method
+      looptest
+      #18
+      _formal
+        max
+        Int
+      Object
+      #19
+      _let
+        i
+        Int
+        #19
+        _int
+          1
+        : Int
+        #20
+        _block
+          #21
+          _dispatch
+            #21
+            _object
+              self
+            : SELF_TYPE
+            out_string
+            (
+            #21
+            _string
+              "Calculating fibonacci sequence...\n"
+            : String
+            )
+          : SELF_TYPE
+          #23
+          _loop
+            #23
+            _leq
+              #23
+              _object
+                i
+              : Int
+              #23
+              _object
+                max
+              : Int
+            : Bool
+            #24
+            _block
+              #25
+              _let
+                f
+                Int
+                #0
+                _no_expr
+                : _no_type
+                #26
+                _block
+                  #27
+                  _assign
+                    f
+                    #27
+                    _dispatch
+                      #27
+                      _object
+                        self
+                      : SELF_TYPE
+                      fib
+                      (
+                      #27
+                      _object
+                        i
+                      : Int
+                      )
+                    : Int
+                  : Int
+                  #28
+                  _dispatch
+                    #28
+                    _object
+                      self
+                    : SELF_TYPE
+                    out_int
+                    (
+                    #28
+                    _object
+                      f
+                    : Int
+                    )
+                  : SELF_TYPE
+                  #29
+                  _assign
+                    i
+                    #29
+                    _plus
+                      #29
+                      _object
+                        i
+                      : Int
+                      #29
+                      _int
+                        1
+                      : Int
+                    : Int
+                  : Int
+                  #30
+                  _dispatch
+                    #30
+                    _object
+                      self
+                    : SELF_TYPE
+                    out_string
+                    (
+                    #30
+                    _string
+                      "\n"
+                    : String
+                    )
+                  : SELF_TYPE
+                : SELF_TYPE
+              : SELF_TYPE
+            : SELF_TYPE
+          : Object
+        : Object
+      : Object
+    )
+  #37
+  _class
+    A
+    Object
+    "fib.cl"
+    (
+    #38
+    _attr
+      a
+      Int
+      #38
+      _int
+        0
+      : Int
+    #39
+    _attr
+      d
+      Int
+      #39
+      _int
+        1
+      : Int
+    #40
+    _method
+      f
+      Int
+      #40
+      _assign
+        a
+        #40
+        _plus
+          #40
+          _object
+            a
+          : Int
+          #40
+          _object
+            d
+          : Int
+        : Int
+      : Int
+    #41
+    _method
+      i
+      #41
+      _formal
+        x
+        Int
+      #41
+      _formal
+        y
+        Int
+      #41
+      _formal
+        z
+        Int
+      Int
+      #41
+      _assign
+        a
+        #41
+        _plus
+          #41
+          _sub
+            #41
+            _object
+              x
+            : Int
+            #41
+            _object
+              y
+            : Int
+          : Int
+          #41
+          _object
+            z
+          : Int
+        : Int
+      : Int
+    )
+  #44
+  _class
+    B
+    A
+    "fib.cl"
+    (
+    #45
+    _attr
+      b
+      Int
+      #45
+      _int
+        2
+      : Int
+    #46
+    _method
+      f
+      Int
+      #46
+      _object
+        a
+      : Int
+    #47
+    _method
+      g
+      Int
+      #47
+      _assign
+        a
+        #47
+        _sub
+          #47
+          _object
+            a
+          : Int
+          #47
+          _object
+            b
+          : Int
+        : Int
+      : Int
+    )
+  #50
+  _class
+    C
+    A
+    "fib.cl"
+    (
+    #51
+    _attr
+      c
+      Int
+      #51
+      _plus
+        #51
+        _sub
+          #51
+          _plus
+            #51
+            _object
+              a
+            : Int
+            #51
+            _object
+              c
+            : Int
+          : Int
+          #51
+          _object
+            d
+          : Int
+        : Int
+        #51
+        _int
+          3
+        : Int
+      : Int
+    #52
+    _attr
+      s
+      String
+      #0
+      _no_expr
+      : _no_type
+    #53
+    _attr
+      classB
+      B
+      #53
+      _new
+        B
+      : B
+    #54
+    _attr
+      flag
+      Bool
+      #0
+      _no_expr
+      : _no_type
+    #55
+    _attr
+      obj
+      Object
+      #0
+      _no_expr
+      : _no_type
+    #56
+    _method
+      h
+      Int
+      #56
+      _assign
+        a
+        #56
+        _mul
+          #56
+          _object
+            a
+          : Int
+          #56
+          _object
+            c
+          : Int
+        : Int
+      : Int
+    #57
+    _method
+      j
+      Int
+      #57
+      _dispatch
+        #57
+        _object
+          self
+        : SELF_TYPE
+        i
+        (
+        #57
+        _plus
+          #57
+          _object
+            a
+          : Int
+          #57
+          _int
+            1
+          : Int
+        : Int
+        #57
+        _plus
+          #57
+          _object
+            d
+          : Int
+          #57
+          _int
+            2
+          : Int
+        : Int
+        #57
+        _plus
+          #57
+          _object
+            c
+          : Int
+          #57
+          _int
+            3
+          : Int
+        : Int
+        )
+      : Int
+    #58
+    _method
+      k
+      #58
+      _formal
+        m
+        Int
+      Object
+      #59
+      _let
+        u
+        Int
+        #59
+        _plus
+          #59
+          _object
+            m
+          : Int
+          #59
+          _int
+            1
+          : Int
+        : Int
+        #60
+        _typcase
+          #60
+          _object
+            obj
+          : Object
+          #61
+          _branch
+            x
+            Int
+            #61
+            _plus
+              #61
+              _object
+                u
+              : Int
+              #61
+              _object
+                c
+              : Int
+            : Int
+          #62
+          _branch
+            y
+            String
+            #62
+            _object
+              s
+            : String
+          #63
+          _branch
+            z
+            Bool
+            #63
+            _object
+              flag
+            : Bool
+          #64
+          _branch
+            v
+            A
+            #64
+            _object
+              classB
+            : B
+          #65
+          _branch
+            w
+            Object
+            #65
+            _object
+              obj
+            : Object
+        : Object
+      : Object
+    )
