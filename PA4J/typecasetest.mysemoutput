@@ -1,0 +1,228 @@
+#1
+_program
+  #1
+  _class
+    Main
+    Object
+    "typecasetest.cl"
+    (
+    #2
+    _method
+      main
+      Object
+      #3
+      _typcase
+        #3
+        _new
+          B
+        : B
+        #4
+        _branch
+          x
+          B
+          #4
+          _dispatch
+            #4
+            _object
+              x
+            : B
+            mul
+            (
+            #4
+            _int
+              1
+            : Int
+            #4
+            _int
+              2
+            : Int
+            )
+          : Int
+        #5
+        _branch
+          y
+          A
+          #5
+          _dispatch
+            #5
+            _object
+              y
+            : A
+            plus
+            (
+            #5
+            _int
+              1
+            : Int
+            #5
+            _int
+              2
+            : Int
+            )
+          : Int
+        #6
+        _branch
+          z
+          C
+          #6
+          _dispatch
+            #6
+            _object
+              z
+            : C
+            sub
+            (
+            #6
+            _int
+              1
+            : Int
+            #6
+            _int
+              2
+            : Int
+            )
+          : Int
+        #7
+        _branch
+          w
+          D
+          #7
+          _dispatch
+            #7
+            _object
+              w
+            : D
+            divide
+            (
+            #7
+            _int
+              2
+            : Int
+            #7
+            _int
+              1
+            : Int
+            )
+          : Int
+      : Int
+    )
+  #11
+  _class
+    B
+    A
+    "typecasetest.cl"
+    (
+    #12
+    _method
+      mul
+      #12
+      _formal
+        x
+        Int
+      #12
+      _formal
+        y
+        Int
+      Int
+      #12
+      _mul
+        #12
+        _object
+          x
+        : Int
+        #12
+        _object
+          y
+        : Int
+      : Int
+    )
+  #14
+  _class
+    A
+    Object
+    "typecasetest.cl"
+    (
+    #15
+    _method
+      plus
+      #15
+      _formal
+        x
+        Int
+      #15
+      _formal
+        y
+        Int
+      Int
+      #15
+      _plus
+        #15
+        _object
+          x
+        : Int
+        #15
+        _object
+          y
+        : Int
+      : Int
+    )
+  #18
+  _class
+    C
+    A
+    "typecasetest.cl"
+    (
+    #19
+    _method
+      sub
+      #19
+      _formal
+        x
+        Int
+      #19
+      _formal
+        y
+        Int
+      Int
+      #19
+      _sub
+        #19
+        _object
+          x
+        : Int
+        #19
+        _object
+          y
+        : Int
+      : Int
+    )
+  #22
+  _class
+    D
+    A
+    "typecasetest.cl"
+    (
+    #23
+    _method
+      divide
+      #23
+      _formal
+        x
+        Int
+      #23
+      _formal
+        y
+        Int
+      Int
+      #23
+      _divide
+        #23
+        _object
+          x
+        : Int
+        #23
+        _object
+          y
+        : Int
+      : Int
+    )

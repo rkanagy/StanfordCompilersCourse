@@ -1,0 +1,119 @@
+#1
+_program
+  #1
+  _class
+    Main
+    Object
+    "letexpr.cl"
+    (
+    #2
+    _method
+      main
+      IO
+      #3
+      _let
+        x
+        Int
+        #3
+        _int
+          123
+        : Int
+        #3
+        _let
+          y
+          String
+          #0
+          _no_expr
+          : _no_type
+          #4
+          _dispatch
+            #4
+            _object
+              self
+            : SELF_TYPE
+            printvals
+            (
+            #4
+            _object
+              x
+            : Int
+            #4
+            _object
+              y
+            : String
+            )
+          : IO
+        : IO
+      : IO
+    #6
+    _method
+      printvals
+      #6
+      _formal
+        a
+        Int
+      #6
+      _formal
+        b
+        String
+      IO
+      #6
+      _block
+        #7
+        _dispatch
+          #7
+          _new
+            IO
+          : IO
+          out_int
+          (
+          #7
+          _object
+            a
+          : Int
+          )
+        : IO
+        #8
+        _dispatch
+          #8
+          _new
+            IO
+          : IO
+          out_string
+          (
+          #8
+          _string
+            "\n"
+          : String
+          )
+        : IO
+        #9
+        _dispatch
+          #9
+          _new
+            IO
+          : IO
+          out_string
+          (
+          #9
+          _object
+            b
+          : String
+          )
+        : IO
+        #10
+        _dispatch
+          #10
+          _new
+            IO
+          : IO
+          out_string
+          (
+          #10
+          _string
+            "\n"
+          : String
+          )
+        : IO
+      : IO
+    )

@@ -1,0 +1,200 @@
+#1
+_program
+  #1
+  _class
+    Main
+    Object
+    "quiz44.cl"
+    (
+    #2
+    _method
+      main
+      Object
+      #3
+      _dispatch
+        #3
+        _new
+          Bar
+        : Bar
+        bar
+        (
+        )
+      : Object
+    )
+  #7
+  _class
+    Foo
+    IO
+    "quiz44.cl"
+    (
+    #8
+    _method
+      foo
+      SELF_TYPE
+      #8
+      _block
+        #9
+        _dispatch
+          #9
+          _object
+            self
+          : SELF_TYPE
+          out_string
+          (
+          #9
+          _string
+            "Foo.foo()\n"
+          : String
+          )
+        : SELF_TYPE
+        #10
+        _dispatch
+          #10
+          _object
+            self
+          : SELF_TYPE
+          foo
+          (
+          )
+        : SELF_TYPE
+        #11
+        _object
+          self
+        : SELF_TYPE
+      : SELF_TYPE
+    )
+  #15
+  _class
+    Bar
+    Foo
+    "quiz44.cl"
+    (
+    #16
+    _method
+      foo
+      SELF_TYPE
+      #16
+      _block
+        #17
+        _dispatch
+          #17
+          _object
+            self
+          : SELF_TYPE
+          out_string
+          (
+          #17
+          _string
+            "Bar.foo\n"
+          : String
+          )
+        : SELF_TYPE
+        #18
+        _new
+          SELF_TYPE
+        : SELF_TYPE
+      : SELF_TYPE
+    #20
+    _method
+      bar
+      Object
+      #21
+      _typcase
+        #21
+        _dispatch
+          #21
+          _object
+            self
+          : SELF_TYPE
+          foo
+          (
+          )
+        : SELF_TYPE
+        #22
+        _branch
+          f
+          Foo
+          #22
+          _static_dispatch
+            #22
+            _object
+              f
+            : Foo
+            Foo
+            foo
+            (
+            )
+          : Foo
+        #23
+        _branch
+          b
+          Bar
+          #23
+          _dispatch
+            #23
+            _new
+              Bazz
+            : Bazz
+            foo
+            (
+            )
+          : Bazz
+        #24
+        _branch
+          o
+          Object
+          #24
+          _dispatch
+            #24
+            _object
+              self
+            : SELF_TYPE
+            foo
+            (
+            )
+          : SELF_TYPE
+      : Foo
+    )
+  #28
+  _class
+    Bazz
+    Bar
+    "quiz44.cl"
+    (
+    #29
+    _method
+      foo
+      SELF_TYPE
+      #29
+      _block
+        #30
+        _dispatch
+          #30
+          _object
+            self
+          : SELF_TYPE
+          out_string
+          (
+          #30
+          _string
+            "Bazz.foo()\n"
+          : String
+          )
+        : SELF_TYPE
+        #31
+        _static_dispatch
+          #31
+          _new
+            Bar
+          : Bar
+          Foo
+          foo
+          (
+          )
+        : Bar
+        #32
+        _object
+          self
+        : SELF_TYPE
+      : SELF_TYPE
+    )

@@ -1,0 +1,47 @@
+#1
+_program
+  #1
+  _class
+    Main
+    Object
+    "test2.cl"
+    (
+    #1
+    _method
+      main
+      Int
+      #1
+      _int
+        0
+      : _no_type
+    )
+  #3
+  _class
+    A
+    Object
+    "test2.cl"
+    (
+    #4
+    _method
+      inky
+      SELF_TYPE
+      #4
+      _object
+        self
+      : _no_type
+    )
+  #7
+  _class
+    B
+    A
+    "test2.cl"
+    (
+    #8
+    _method
+      inky
+      SELF_TYPE
+      #8
+      _new
+        SELF_TYPE
+      : _no_type
+    )

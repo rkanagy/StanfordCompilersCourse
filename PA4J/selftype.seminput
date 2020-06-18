@@ -1,0 +1,771 @@
+#1
+_program
+  #1
+  _class
+    Silly
+    Object
+    "selftype.cl"
+    (
+    #2
+    _method
+      copy
+      SELF_TYPE
+      #2
+      _object
+        self
+      : _no_type
+    #3
+    _method
+      test
+      Silly
+      #3
+      _object
+        self
+      : _no_type
+    #4
+    _method
+      test2
+      Silly
+      #4
+      _new
+        Silly
+      : _no_type
+    #5
+    _method
+      create
+      Silly
+      #5
+      _new
+        SELF_TYPE
+      : _no_type
+    )
+  #8
+  _class
+    Sally
+    Silly
+    "selftype.cl"
+    (
+    #9
+    _method
+      testcreate
+      Silly
+      #9
+      _dispatch
+        #9
+        _object
+          self
+        : _no_type
+        create
+        (
+        )
+      : _no_type
+    #10
+    _method
+      testcopy
+      Silly
+      #10
+      _dispatch
+        #10
+        _object
+          self
+        : _no_type
+        copy
+        (
+        )
+      : _no_type
+    )
+  #13
+  _class
+    Tally
+    Sally
+    "selftype.cl"
+    (
+    #14
+    _method
+      testcreate2
+      Silly
+      #14
+      _dispatch
+        #14
+        _new
+          SELF_TYPE
+        : _no_type
+        testcreate
+        (
+        )
+      : _no_type
+    #15
+    _method
+      testcreate
+      Silly
+      #15
+      _block
+        #16
+        _dispatch
+          #16
+          _new
+            IO
+          : _no_type
+          out_string
+          (
+          #16
+          _string
+            "testcreate() in Tally\n"
+          : _no_type
+          )
+        : _no_type
+        #17
+        _let
+          x
+          SELF_TYPE
+          #17
+          _new
+            SELF_TYPE
+          : _no_type
+          #18
+          _static_dispatch
+            #18
+            _object
+              x
+            : _no_type
+            Sally
+            testcreate
+            (
+            )
+          : _no_type
+        : _no_type
+      : _no_type
+    )
+  #22
+  _class
+    Tilly
+    Tally
+    "selftype.cl"
+    (
+    #23
+    _method
+      testcreate
+      Silly
+      #23
+      _block
+        #24
+        _dispatch
+          #24
+          _new
+            IO
+          : _no_type
+          out_string
+          (
+          #24
+          _string
+            "testcreate() in Tilly\n"
+          : _no_type
+          )
+        : _no_type
+        #25
+        _let
+          x
+          SELF_TYPE
+          #25
+          _new
+            SELF_TYPE
+          : _no_type
+          #26
+          _static_dispatch
+            #26
+            _object
+              x
+            : _no_type
+            Sally
+            testcreate
+            (
+            )
+          : _no_type
+        : _no_type
+      : _no_type
+    )
+  #30
+  _class
+    Main
+    Object
+    "selftype.cl"
+    (
+    #31
+    _attr
+      x
+      Sally
+      #31
+      _dispatch
+        #31
+        _new
+          Sally
+        : _no_type
+        copy
+        (
+        )
+      : _no_type
+    #32
+    _attr
+      y
+      Silly
+      #32
+      _dispatch
+        #32
+        _new
+          Sally
+        : _no_type
+        copy
+        (
+        )
+      : _no_type
+    #33
+    _attr
+      z
+      Silly
+      #33
+      _dispatch
+        #33
+        _new
+          Silly
+        : _no_type
+        copy
+        (
+        )
+      : _no_type
+    #35
+    _attr
+      b
+      Silly
+      #35
+      _dispatch
+        #35
+        _new
+          Sally
+        : _no_type
+        test
+        (
+        )
+      : _no_type
+    #36
+    _attr
+      c
+      Silly
+      #36
+      _dispatch
+        #36
+        _new
+          Silly
+        : _no_type
+        test
+        (
+        )
+      : _no_type
+    #38
+    _attr
+      e
+      Silly
+      #38
+      _dispatch
+        #38
+        _new
+          Sally
+        : _no_type
+        test2
+        (
+        )
+      : _no_type
+    #39
+    _attr
+      f
+      Silly
+      #39
+      _dispatch
+        #39
+        _new
+          Silly
+        : _no_type
+        test2
+        (
+        )
+      : _no_type
+    #41
+    _attr
+      h
+      Silly
+      #41
+      _dispatch
+        #41
+        _new
+          Sally
+        : _no_type
+        create
+        (
+        )
+      : _no_type
+    #42
+    _attr
+      i
+      Silly
+      #42
+      _dispatch
+        #42
+        _new
+          Silly
+        : _no_type
+        create
+        (
+        )
+      : _no_type
+    #43
+    _attr
+      j
+      Silly
+      #43
+      _dispatch
+        #43
+        _new
+          Sally
+        : _no_type
+        testcreate
+        (
+        )
+      : _no_type
+    #44
+    _attr
+      k
+      Silly
+      #44
+      _dispatch
+        #44
+        _new
+          Tally
+        : _no_type
+        testcreate2
+        (
+        )
+      : _no_type
+    #45
+    _attr
+      l
+      Silly
+      #45
+      _dispatch
+        #45
+        _new
+          Tilly
+        : _no_type
+        testcreate2
+        (
+        )
+      : _no_type
+    #46
+    _attr
+      m
+      Silly
+      #46
+      _dispatch
+        #46
+        _new
+          Tilly
+        : _no_type
+        testcopy
+        (
+        )
+      : _no_type
+    #47
+    _attr
+      n
+      Silly
+      #0
+      _no_expr
+      : _no_type
+    #48
+    _attr
+      p
+      SELF_TYPE
+      #0
+      _no_expr
+      : _no_type
+    #50
+    _method
+      main
+      Object
+      #50
+      _block
+        #51
+        _dispatch
+          #51
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #51
+          _object
+            x
+          : _no_type
+          )
+        : _no_type
+        #52
+        _dispatch
+          #52
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #52
+          _object
+            y
+          : _no_type
+          )
+        : _no_type
+        #53
+        _dispatch
+          #53
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #53
+          _object
+            z
+          : _no_type
+          )
+        : _no_type
+        #55
+        _dispatch
+          #55
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #55
+          _object
+            b
+          : _no_type
+          )
+        : _no_type
+        #56
+        _dispatch
+          #56
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #56
+          _object
+            c
+          : _no_type
+          )
+        : _no_type
+        #58
+        _dispatch
+          #58
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #58
+          _object
+            e
+          : _no_type
+          )
+        : _no_type
+        #59
+        _dispatch
+          #59
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #59
+          _object
+            f
+          : _no_type
+          )
+        : _no_type
+        #61
+        _dispatch
+          #61
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #61
+          _object
+            h
+          : _no_type
+          )
+        : _no_type
+        #62
+        _dispatch
+          #62
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #62
+          _object
+            i
+          : _no_type
+          )
+        : _no_type
+        #63
+        _dispatch
+          #63
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #63
+          _object
+            j
+          : _no_type
+          )
+        : _no_type
+        #64
+        _dispatch
+          #64
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #64
+          _object
+            k
+          : _no_type
+          )
+        : _no_type
+        #65
+        _dispatch
+          #65
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #65
+          _object
+            l
+          : _no_type
+          )
+        : _no_type
+        #66
+        _dispatch
+          #66
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #66
+          _object
+            m
+          : _no_type
+          )
+        : _no_type
+        #67
+        _dispatch
+          #67
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #67
+          _assign
+            n
+            #67
+            _new
+              Tilly
+            : _no_type
+          : _no_type
+          )
+        : _no_type
+        #68
+        _assign
+          p
+          #68
+          _object
+            self
+          : _no_type
+        : _no_type
+        #69
+        _dispatch
+          #69
+          _object
+            self
+          : _no_type
+          printType
+          (
+          #69
+          _object
+            p
+          : _no_type
+          )
+        : _no_type
+        #71
+        _let
+          o
+          SELF_TYPE
+          #71
+          _object
+            self
+          : _no_type
+          #72
+          _dispatch
+            #72
+            _object
+              self
+            : _no_type
+            printType
+            (
+            #72
+            _object
+              o
+            : _no_type
+            )
+          : _no_type
+        : _no_type
+      : _no_type
+    #75
+    _method
+      printType
+      #75
+      _formal
+        t
+        Object
+      Object
+      #76
+      _typcase
+        #76
+        _object
+          t
+        : _no_type
+        #77
+        _branch
+          e
+          Tilly
+          #77
+          _dispatch
+            #77
+            _new
+              IO
+            : _no_type
+            out_string
+            (
+            #77
+            _string
+              "object is type Tilly\n"
+            : _no_type
+            )
+          : _no_type
+        #78
+        _branch
+          d
+          Tally
+          #78
+          _dispatch
+            #78
+            _new
+              IO
+            : _no_type
+            out_string
+            (
+            #78
+            _string
+              "object is type Tally\n"
+            : _no_type
+            )
+          : _no_type
+        #79
+        _branch
+          a
+          Sally
+          #79
+          _dispatch
+            #79
+            _new
+              IO
+            : _no_type
+            out_string
+            (
+            #79
+            _string
+              "object is type Sally\n"
+            : _no_type
+            )
+          : _no_type
+        #80
+        _branch
+          b
+          Silly
+          #80
+          _dispatch
+            #80
+            _new
+              IO
+            : _no_type
+            out_string
+            (
+            #80
+            _string
+              "object is type Silly\n"
+            : _no_type
+            )
+          : _no_type
+        #81
+        _branch
+          e
+          Main
+          #81
+          _dispatch
+            #81
+            _new
+              IO
+            : _no_type
+            out_string
+            (
+            #81
+            _string
+              "object is type Main\n"
+            : _no_type
+            )
+          : _no_type
+        #82
+        _branch
+          c
+          Object
+          #82
+          _dispatch
+            #82
+            _new
+              IO
+            : _no_type
+            out_string
+            (
+            #82
+            _string
+              "object is type Object\n"
+            : _no_type
+            )
+          : _no_type
+      : _no_type
+    )
+  #86
+  _class
+    SubMain
+    Main
+    "selftype.cl"
+    (
+    )

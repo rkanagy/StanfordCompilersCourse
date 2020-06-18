@@ -1,0 +1,55 @@
+#1
+_program
+  #1
+  _class
+    Main
+    Object
+    "newtest.cl"
+    (
+    #2
+    _method
+      main
+      Object
+      #3
+      _dispatch
+        #3
+        _new
+          A
+        : A
+        copy
+        (
+        )
+      : A
+    )
+  #6
+  _class
+    A
+    Object
+    "newtest.cl"
+    (
+    #7
+    _method
+      copy
+      SELF_TYPE
+      #7
+      _block
+        #8
+        _dispatch
+          #8
+          _new
+            IO
+          : IO
+          out_string
+          (
+          #8
+          _string
+            "A.copy was called"
+          : String
+          )
+        : IO
+        #9
+        _object
+          self
+        : SELF_TYPE
+      : SELF_TYPE
+    )
